@@ -1,15 +1,13 @@
-package com.example.demo;
+package com.example.demo.controller;
 
-import com.example.demo.controller.HelloController;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-public class HelloControllerTest {
+@RestController
+public class HelloController {
 
-    @Test
-    public void testSayHello() {
-        HelloController controller = new HelloController();
-        String result = controller.sayHello();
-        assertEquals("Hello from Jenkins + Maven project!", result);
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello from Jenkins + Maven project!";
     }
 }
