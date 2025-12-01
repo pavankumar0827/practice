@@ -10,6 +10,6 @@ public class HelloControllerTest {
     public void testSayHello() {
         HelloController controller = new HelloController();
         String result = controller.sayHello();
-        assertEquals("Hello from Jenkin + Maven project!", result);
+        assertEquals("Hello from Jenkins + Maven project!", result);
     }
 }
